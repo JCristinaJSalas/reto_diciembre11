@@ -77,7 +77,29 @@ Tener longitud de 8, contener 1 mayuscula y 1 minuscula, ademas de 1 numero, y d
 
 ## Punto3
 
- 
+ El programa creado es capaz de generar una contraseña aleatoria, manejado la tabla de peso de ASCII.  Se destaca la capacidad de generar un tamaño aleatorio a la contraseña entre 8 y 16, incluyendolos.  Esta contraseña contiene todos los caracteres de la tabla ASCII.
+
+````
+
+    public static void main(String[] args) {
+        
+        int tamano =(int)(Math.random()*9)+8;
+        
+        char[] frase = new char[tamano];
+        
+        for (int i = 0; i< tamano; i++){
+            double num = Math.random()*50;
+            int valor = (int) num + 33;
+            char letra = (char) valor;
+            frase[i] = letra;
+        }
+        String contrasena = String.valueOf(frase);
+        System.out.println(contrasena);
+    }    
+
+````
+
+
 
 
 
